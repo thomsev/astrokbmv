@@ -1,0 +1,60 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/contact.css';
+---
+<Layout title="KBMV | Kontakt">
+  <Fragment slot="head">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+  </Fragment>
+  <section class="contact-hero">
+    <div class="container">
+      <div class="section-title">
+        <h2>Kontakt</h2>
+        <p>Vi gleder oss til å høre fra deg om kurs, kunst eller bestilling.</p>
+      </div>
+      <div class="contact-card">
+        <form class="contact-form">
+          <div class="field">
+            <input type="text" name="name" placeholder=" " required />
+            <label>Navn</label>
+          </div>
+          <div class="field">
+            <input type="email" name="email" placeholder=" " required />
+            <label>E-post</label>
+          </div>
+          <div class="field">
+            <textarea name="message" rows={4} placeholder=" " required></textarea>
+            <label>Melding</label>
+          </div>
+          <button class="button" type="submit">Send forespørsel</button>
+        </form>
+        <div>
+          <div id="map" class="map"></div>
+          <div class="address-block">
+            <p>Havnepromenaden</p>
+            <p>Karmsund</p>
+            <p>post@kbmv.example</p>
+            <p>+47 00 00 00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script is:inline>
+    const map = L.map('map', { zoomControl: false }).setView([59.4111, 5.2797], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+    L.marker([59.4111, 5.2797]).addTo(map).bindPopup('KBMV');
+  </script>
+</Layout>

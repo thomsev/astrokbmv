@@ -1,0 +1,68 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ArtCarousel from '../components/ArtCarousel';
+import EventsList from '../components/EventsList.astro';
+import { events } from '../data/events';
+import '../styles/home.css';
+
+const slides = [
+  {
+    title: 'Havnelys',
+    description: 'Kveldsfarger og stille bølger på lerret med metallic glød.',
+    image: '/art1.svg'
+  },
+  {
+    title: 'Kjellerens notater',
+    description: 'Flasker og etiketter i dype vinrøde toner.',
+    image: '/art2.svg'
+  },
+  {
+    title: 'Åpen ild',
+    description: 'Jern og varme penselstrøk med røkt karakter.',
+    image: '/art3.svg'
+  },
+  {
+    title: 'Sjødrag',
+    description: 'Saltstriper og vind som treffer havnefronten.',
+    image: '/art4.svg'
+  }
+];
+---
+<Layout title="KBMV | Hjem" snap={true}>
+  <section class="hero snap-section">
+    <div class="container hero-content">
+      <h1 class="hero-text">
+        <span>Karmsund</span> <span>Båt</span> <span>Mat &amp; Vin</span>
+      </h1>
+      <p>
+        En mørk og elegant møteplass mellom kunst, sjø og nordisk smak.
+      </p>
+      <a class="button" href="/kontakt">Bestill Kurs</a>
+    </div>
+  </section>
+
+  <section class="section snap-section">
+    <div class="container art-section">
+      <div>
+        <ArtCarousel client:load slides={slides} />
+      </div>
+      <div class="art-text">
+        <h3>Galleri i bevegelse</h3>
+        <p>
+          Utvalgte verk fra KBMVs kunstnere roterer gjennom sesongen med
+          havtåke, vinnoter og åpne flammer som inspirasjon.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section snap-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Kommende kurs</h2>
+        <p>Små grupper, store opplevelser og havnelys hele kvelden.</p>
+      </div>
+      <EventsList events={events} />
+    </div>
+  </section>
+</Layout>

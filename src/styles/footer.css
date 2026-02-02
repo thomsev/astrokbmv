@@ -1,0 +1,32 @@
+.footer {
+  padding: 3rem 0 4rem;
+  border-top: 1px solid var(--border);
+  margin-top: 4rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.footer h4 {
+  margin-bottom: 0.8rem;
+}
+
+.footer p, .footer a {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media (max-width: 840px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LightboxGallery from '../components/LightboxGallery';
+
+const items = [
+  {
+    title: 'Havnelys',
+    description: 'Kveldsfarger som speiler havnens stille rytme.',
+    image: '/art1.svg'
+  },
+  {
+    title: 'Kjellerens notater',
+    description: 'Flasker og skisser i et vinrødt og raffinert uttrykk.',
+    image: '/art2.svg'
+  },
+  {
+    title: 'Åpen ild',
+    description: 'Jern, glør og varm atmosfære i et kraftig uttrykk.',
+    image: '/art3.svg'
+  },
+  {
+    title: 'Sjødrag',
+    description: 'Saltstriper og horisontlinjer som aldri står stille.',
+    image: '/art4.svg'
+  },
+  {
+    title: 'Nattbrygge',
+    description: 'Dype blåtoner og svakt lys fra dekkene.',
+    image: '/art5.svg'
+  },
+  {
+    title: 'Klart kjølvann',
+    description: 'Rolige strøk som følger båtens spor.',
+    image: '/art6.svg'
+  }
+];
+---
+<Layout title="KBMV | Kunst">
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Kunst</h2>
+        <p>Oppdag sesongens signaturverk fra KBMV-galleriet.</p>
+      </div>
+      <LightboxGallery client:load items={items} />
+    </div>
+  </section>
+</Layout>

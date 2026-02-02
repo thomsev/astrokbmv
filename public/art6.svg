@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="wash" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b0f12" />
+      <stop offset="100%" stop-color="#7a002a" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#wash)" />
+  <rect x="60" y="60" width="680" height="480" rx="32" fill="rgba(11,61,79,0.45)" stroke="#e9ecf1" stroke-width="2" />
+  <text x="50%" y="52%" text-anchor="middle" fill="#e9ecf1" font-size="36" font-family="Playfair Display, serif">KBMV Kunstverk 6</text>
+</svg>

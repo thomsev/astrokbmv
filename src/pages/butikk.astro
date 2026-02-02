@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ShopExperience from '../components/ShopExperience';
+---
+<Layout title="KBMV | Butikk">
+  <section class="shop-hero">
+    <div class="container">
+      <h1>Butikk</h1>
+      <p class="shop-lead">
+        Kuratert utvalg av kunst, glass og maritime detaljer fra KBMV.
+      </p>
+    </div>
+  </section>
+  <ShopExperience client:load />
+</Layout>

@@ -1,0 +1,70 @@
+.contact-hero {
+  padding: 8rem 0 4rem;
+}
+
+.contact-card {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  background: rgba(18, 24, 32, 0.7);
+}
+
+.contact-form {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.field {
+  position: relative;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 1rem 0.9rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(10, 14, 18, 0.7);
+  color: var(--text);
+}
+
+.field label {
+  position: absolute;
+  left: 0.9rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted);
+  transition: 0.2s ease;
+  pointer-events: none;
+}
+
+.field input:focus + label,
+.field input:not(:placeholder-shown) + label,
+.field textarea:focus + label,
+.field textarea:not(:placeholder-shown) + label {
+  top: 0.4rem;
+  font-size: 0.7rem;
+  color: var(--text);
+}
+
+.map {
+  min-height: 320px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.address-block {
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 900px) {
+  .contact-card {
+    grid-template-columns: 1fr;
+  }
+}
