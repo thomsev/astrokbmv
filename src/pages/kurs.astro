@@ -1,0 +1,17 @@
+---
+import Layout from '../layouts/Layout.astro';
+import EventsList from '../components/EventsList.astro';
+import { events } from '../data/events';
+import '../styles/home.css';
+---
+<Layout title="KBMV | Kurs">
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Kurs</h2>
+        <p>Kort og ryddig oversikt over kommende arrangement.</p>
+      </div>
+      <EventsList events={events} />
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/webcam.css';
+---
+<Layout title="KBMV | Webkamera">
+  <section class="webcam-wrapper">
+    <div class="container">
+      <div class="section-title">
+        <h2>Webkamera</h2>
+        <p>Direktesendt utsikt mot Karmsunds havnefront.</p>
+      </div>
+      <div class="webcam-frame">
+        <iframe
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          title="KBMV Live"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        <div class="live-badge">
+          <span class="live-dot"></span>
+          LIVE
+        </div>
+        <div class="glitch"></div>
+      </div>
+    </div>
+  </section>
+</Layout>

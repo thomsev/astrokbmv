@@ -1,0 +1,64 @@
+.webcam-wrapper {
+  padding: 8rem 0 4rem;
+}
+
+.webcam-frame {
+  position: relative;
+  padding-top: 56.25%;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #05070a;
+}
+
+.webcam-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.live-badge {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(179, 18, 75, 0.2);
+  border: 1px solid rgba(179, 18, 75, 0.5);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ff5d8f;
+  box-shadow: 0 0 12px rgba(255, 93, 143, 0.8);
+}
+
+.glitch {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(11, 61, 79, 0.18),
+    rgba(11, 61, 79, 0.18) 6px,
+    rgba(179, 18, 75, 0.18) 6px,
+    rgba(179, 18, 75, 0.18) 12px
+  );
+  opacity: 0.2;
+  animation: glitchMove 3s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes glitchMove {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-10px); }
+  100% { transform: translateX(0); }
+}
